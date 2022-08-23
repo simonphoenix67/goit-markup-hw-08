@@ -1,0 +1,122 @@
+@import '../utils/variables';
+
+%animation {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+%positions {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+%flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  background: getColor('bg-our-team-color');
+  padding-bottom: 94px;
+}
+
+
+
+.team__header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: getColor('main-color');
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  list-style: none;
+  text-decoration: none;
+   width: 1200px;
+}
+
+.team-list__item {
+  background-color: getColor('secondary-color');
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+  margin-right: 30px;
+}
+}
+
+.team__description {
+  margin-bottom: 30px;
+}
+
+.team__name {
+  @extend %positions;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  width: 270px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team__position {
+  @extend %positions;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: getColor('additional-color');
+}
+
+.socials {
+  @extend %flexed;
+  list-style: none;
+  margin-top: 16px;
+
+  &__item:not(:last-child) {
+  margin-right: 10px;
+}
+}
+
+
+
+.socials__link {
+  @extend %flexed;
+  @extend %animation;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition-property: background-color;
+
+  &:hover,
+  &:focus {
+  background-color: getColor('brand-color');
+}
+}
+
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: getColor('logo-border');
+  @extend %animation;
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+  fill: getColor('secondary-color');
+}
+}

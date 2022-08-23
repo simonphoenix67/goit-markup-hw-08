@@ -1,0 +1,65 @@
+@import '../utils/variables';
+
+.customer {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__header {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: getColor('main-color');
+  margin-bottom: 50px;
+}
+}
+
+.grid {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+
+  &__list:not(:last-child) {
+  margin-right: 30px;
+}
+}
+
+.logo-customer__icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.logo-customer {
+  fill: getColor('logo-border');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  outline: 1px solid getColor('logo-border');
+  border-radius: 4px;
+
+  &:hover .logo-customer__icon,
+  &:focus .logo-customer__icon
+   {
+    fill: getColor('brand-color');
+  }
+
+  &:hover, &:focus {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  fill: getColor('brand-color');
+  outline: 1px solid getColor('brand-color');
+  border-radius: 4px;
+  }
+ 
+}
+
+
+
+
